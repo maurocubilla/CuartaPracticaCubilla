@@ -55,7 +55,8 @@ const userSchema = new mongoose.Schema({
     avatar:{
         type:String,
         required:true
-    }
+    },
+    
 });
 
 export const usersModel = mongoose.model(usersCollection,userSchema);

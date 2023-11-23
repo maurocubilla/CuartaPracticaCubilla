@@ -13,6 +13,7 @@ export const initializePassport = ()=>{
         async (req, username, password, done)=>{
             try {
                 const {first_name, last_name, age} = req.body;
+                console.log(req.file);
                 //verificar si el usuario ya se registro
                 const user = await UsersService.getUserByEmail(username);
                 if(user){
@@ -26,7 +27,8 @@ export const initializePassport = ()=>{
                     first_name:first_name,
                     email: username,
                     password: createHash(password),
-                    role:role
+                    role:role,
+                    avatar:req.file.filename,
                 }
                 const userCreated = await UsersService.saveUser(newUser);
                 return done(null,userCreated)//En este punto passport completa el proceso de manera satisfactoria

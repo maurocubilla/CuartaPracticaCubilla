@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1" ,
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/app.js",
     "update-products": "node src/scripts/mongo.scripts.js"
   },
@@ -21,6 +21,7 @@
     "express-session": "^1.17.3",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.4.1",
+    "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.7",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
